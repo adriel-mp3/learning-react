@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Load React, React Dom e Babel -->
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+  <!-- Don't use this in production: -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <title>JavaScript & React</title>
+</head>
+
+<body>
+  <!-- How would it be in javascript? -->
+  <div id="app-javascript">
+    <h1>Javascript</h1>
+    <p>Price: $ <span id="price"></span></p>
+    <p>Items: <span id="items"></span></p>
+    <button id="button">Buy</button>
+  </div>
+
+  <script type="application/javascript">
+    const button = document.getElementById('button');
+    const price = document.getElementById('price');
+    const items = document.getElementById('items');
+
+    let counter = 1;
+
+    const updateValues = (value) => {
+      items.innerText = counter;
+      price.innerText = counter * 250;
+    }
+
+    updateValues(counter);
+
+    const handleClick = () => {
+      counter++
+      return updateValues(counter);
+    }
+
+    button.addEventListener('click', handleClick);
+  </script>
+
+  <!-- How would it be in React? -->
+  <div id="root"></div>
+  <script type="text/babel">
+    const App = () => {
+      const [counter, setCounter] = React.useState(1);
+      
+      return <div>
+        <h1>React</h1>
+        <p>Price: $ {counter * 250}<span></span></p>
+        <p>Items: {counter}<span></span></p>
+        <button onClick={() => setCounter(counter + 1)}>Buy</button>
+      </div>
+    }
+
+    const container = document.getElementById('root');
+    const root = ReactDOM.createRoot(container);
+    root.render(<App />);
+  </script>
+</body>
+
+</html>
