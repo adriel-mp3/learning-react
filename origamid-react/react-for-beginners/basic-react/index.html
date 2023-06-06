@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basic React</title>
+
+  <!-- Load React, React Dom e Babel -->
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+  <!-- Don't use this in production: -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+  <div id="root"></div>
+
+  <script type="text/babel">
+    const Button = () => {
+      // useState define a reactive variable
+      const [count, setCount] = React.useState(0);
+
+      return <div>
+        <button onClick={() => setCount(count + 1)}>Button {count}</button>
+        <p>Counter x2: {count * 2}</p>
+        <p>Random Number {Math.random().toFixed(2)}</p>
+        </div>;
+    }
+
+    const App = () => {
+      return <div>
+          <h1>My app</h1>
+          <Button />
+        </div> 
+    }
+    
+    const container = document.getElementById('root');
+    const root = ReactDOM.createRoot(container);
+    root.render(<App />);
+  </script>
+
+</body>
+
+</html>
