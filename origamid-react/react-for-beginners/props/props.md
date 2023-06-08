@@ -1,7 +1,7 @@
-Props
+# Props
 
-Componentes React usam props para se comunicar um com o outro, props lembram bastante os atributos HTML, mas eles podem passar qualquer valor JavaScript incluindo objetos, arrays e funções.
+React components use props to communicate with each other. Props are similar to HTML attributes, but they can pass any JavaScript value, including objects, arrays, and functions.
 
-Children
+# Children
 
-Se utilizarmos o componente abrindo e fechando o mesmo, o conteúdo interno deste será acessado através da propriedade children.
+If we use a component by opening and closing it, the inner content of the component can be accessed through the children property.
