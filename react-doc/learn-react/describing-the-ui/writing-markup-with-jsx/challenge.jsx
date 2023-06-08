@@ -34,4 +34,5 @@ export default function Bio() {
 
 /** 
 Conclusion:
-- Tags like class should not be declared within JSX markup because they are reserved words in JavaScript and will result in an error when transformed into an object. Although JSX bears a resemblance to HTML, we must always remember to close all tags, whether they have automatic closing or not, such as the <i> and <br> tags.*/
+- Tags like class should not be declared within JSX markup because they are reserved words in JavaScript and will result in an error when transformed into an object. Although JSX bears a resemblance to HTML, we must always remember to close all tags, whether they have automatic closing or not, such as the <i> and <br> tags.
+*/
