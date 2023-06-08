@@ -53,7 +53,7 @@ export default function Gallery() {
 ```
 
 **Components can render other components, but we should never nest them like this:**
-
+```javascript
 export default function Gallery() {
   // 🔴 Never define a component inside another component!
   function Profile() {
@@ -61,7 +61,7 @@ export default function Gallery() {
   }
   // ...
 }
-
+```
 ## Resume
 
 ### React Components
