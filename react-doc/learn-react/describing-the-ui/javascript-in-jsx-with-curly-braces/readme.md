@@ -53,7 +53,8 @@ In addition to strings, numbers, and other JavaScript expressions, we can also p
 
  Therefore, to pass a JavaScript object in JSX, you need to wrap the object in another pair of curly braces:`person={{name: 'Fulano', age: 23}}`.
 
-We often see this when using inline CSS styles in JSX. React does not require you to use inline styles, and you can also use classes, which work well in certain. cases. já funcionam bem.
+We often see this when using inline CSS styles in JSX. React does not require you to use inline styles, and you can also use classes, which work well in certain. cases.
+
 ```javascript
  export default function TodoList() {
   const ulStyle = {
