@@ -1,13 +1,13 @@
-Mantendo os componentes puros
+# Keeping Components Pure
 
-Algumas funções do JavaScript são puras. Funções puras são funções que realizam apenas um calculo e nada mais. 
+Some JavaScript functions are pure. Pure functions are functions that perform only a calculation and nothing else.
 
-Ao escrever componentes como funções puras estaremos deixando nosso código muito mais escalavel e evitaremos uma classe de erros desconcertantes e comportamentos imprevisiveis.
+By writing components as pure functions, we make our code much more scalable and avoid a class of perplexing bugs and unpredictable behaviors.
 
-Pureza: Componentes como fórmulas
+## Purity: Components as Formulas
 
-Uma função pura é uma função com as seguintes características:
+A pure function has the following characteristics:
 
-- Ele cuida de seus próprios negócios. Ele não altera nenhum objeto ou variável que existia antes de ser chamado.
+- It minds its own business. It does not change any object or variable that existed before it was called.
 
-- Mesmas entradas, mesma saída. Dadas as mesmas entradas, uma função pura deve sempre retornar o mesmo resultado.
+- Same inputs, same outputs. Given the same inputs, a pure function should always return the same result.
